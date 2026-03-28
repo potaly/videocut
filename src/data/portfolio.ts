@@ -55,7 +55,6 @@ export const portfolioData: PortfolioData = {
       title: '求职意向',
       items: [
         '目标岗位：视频剪辑 / 内容剪辑 / 短视频后期 / 剪辑助理',
-        '期望薪资：3-6K',
         '期望城市：深圳',
         '希望用剪辑基础、内容表达和审美能力完成视频相关工作。',
       ],
