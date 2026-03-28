@@ -293,6 +293,17 @@ function App() {
               <strong>情绪剪辑、包装动效、品牌模拟项目</strong>
             </article>
           </div>
+
+          <div className="hero-subgrid">
+            <article className="info-pill subtle">
+              <span>专业背景</span>
+              <strong>{portfolioData.profile.location}</strong>
+            </article>
+            <article className="info-pill subtle">
+              <span>投递建议</span>
+              <strong>{portfolioData.profile.availability}</strong>
+            </article>
+          </div>
         </div>
 
         <div className="hero-reel">

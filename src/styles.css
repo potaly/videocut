@@ -228,7 +228,7 @@ ul {
 }
 
 .hero-layout {
-  align-items: stretch;
+  align-items: start;
 }
 
 .project-hero,
@@ -459,6 +459,7 @@ ul {
 }
 
 .hero-reel {
+  align-self: stretch;
   height: 100%;
 }
 
@@ -471,6 +472,13 @@ ul {
 .hero-fact-row {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: 22px;
+}
+
+.hero-subgrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+  gap: 14px;
+  margin-top: 14px;
 }
 
 .fact-card,
@@ -511,7 +519,7 @@ ul {
 
 .reel-frame {
   height: 100%;
-  min-height: 460px;
+  min-height: 440px;
 }
 
 .phone-frame {
@@ -974,6 +982,10 @@ ul {
   .reference-card,
   .about-preview,
   .hero-fact-row {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-subgrid {
     grid-template-columns: 1fr;
   }
 
