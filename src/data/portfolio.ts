@@ -2,54 +2,127 @@ import type { PortfolioData } from '../types';
 
 export const portfolioData: PortfolioData = {
   profile: {
-    name: '王露迪',
-    role: '视频剪辑 / AE 动效设计',
-    tagline: '动漫设计专业背景，正在寻找能把审美和内容一起做好的视频岗位。',
+    name: '王璐迪',
+    role: '新媒体运营 / 内容策划 / 视频剪辑',
+    tagline: '动漫制作技术专业应届生，擅长内容策划、班级社群运营和基础视频剪辑，期望在深圳从事新媒体运营相关岗位。',
     intro:
-      '我是王露迪，动漫设计专业背景，平时会更关注画面情绪、人物氛围和整体视觉节奏，也希望把这种审美能力延续到视频剪辑和动效包装里。这套作品集不是简单罗列作品，而是按求职逻辑整理成“会剪、会动效、能做商业内容、还有视觉加分项”四个层次，方便在面试里更清楚地表达自己。',
-    location: '专业背景 · 动漫设计 / 求职方向 · 视频剪辑与 AE 动效',
-    availability: '适合投递剪辑、动效设计、内容设计、新媒体视觉相关岗位',
+      '我目前就读于郑州城市职业学院动漫制作技术专业，专业排名前 5%，获得国家励志奖学金。校内长期负责班级事务管理、班级群通知发布和线上讨论组织，也在课程展示和小组作业里承担文案策划、视频剪辑和视觉表达相关工作。这个站点保留了作品展示，同时补上教育背景、校园运营和内容创作经历，让招聘方可以更快判断我的岗位匹配度。',
+    location: '期望城市 · 深圳 / 教育背景 · 郑州城市职业学院动漫制作技术',
+    availability: '适合投递新媒体运营、内容运营、社群运营、短视频内容助理等岗位',
     stats: [
-      { label: '专业背景', value: '动漫设计 / 画面审美与角色感较强' },
-      { label: '核心软件', value: 'PR / AE / PS / AI' },
-      { label: '求职方向', value: '视频剪辑 / AE 动效 / 内容设计' },
+      { label: '求职方向', value: '新媒体运营 / 内容策划 / 社群互动' },
+      { label: '教育经历', value: '2023-2026 郑州城市职业学院 · 大专' },
+      { label: '在校亮点', value: '专业前 5% / 国家励志奖学金 / 校级二等奖' },
     ],
   },
   heroReel: {
-    title: 'Demo Reel 2026',
-    subtitle: '由作品 1、作品 2、作品 3 混剪而成的首页展示片段',
+    title: '内容与剪辑作品展示',
+    subtitle: '用课程展示、模拟品牌视频和动态海报呈现内容表达与视觉执行能力',
     description:
-      '首页首屏先播放一条真正的混剪 Reel，让招聘方在十几秒内先看到剪辑、AE 包装和商业内容三种能力，再继续往下看单个案例。',
+      '虽然求职方向是新媒体运营，但我把能体现内容策划、视频剪辑和视觉审美的作品放在首页，方便招聘方先看到我的实际产出能力。',
     videoUrl: '/exports/demo-reel-2026.mp4',
     poster: '/covers/demo-reel-cover.jpg',
-    highlights: ['首页混剪 Reel', '视频优先', '模拟项目已标注', '适配大陆求职语境'],
+    highlights: ['应届生求职版', '内容策划', '视频剪辑', '视觉审美'],
   },
   skills: [
-    { name: '视频剪辑', detail: '节奏控制、镜头衔接、情绪铺陈、字幕节拍' },
-    { name: 'AE 动效', detail: '片头包装、字体动效、信息动画、转场增强' },
-    { name: '商业内容', detail: '卖点梳理、品牌表达、平台适配、转化意识' },
-    { name: '视觉加分项', detail: '动态海报、KV 延展、审美统一、内容包装' },
+    { name: '内容创作', detail: '选题策划、内容结构设计、文案成稿、用户视角表达' },
+    { name: '社群互动', detail: '班级群通知发布、线上讨论组织、活动动员与反馈收集' },
+    { name: '视频剪辑', detail: '熟练使用剪映完成剪辑、字幕、配乐和基础节奏控制' },
+    { name: '视觉审美', detail: '动漫设计专业背景，具备构图、配色和年轻化风格判断' },
+  ],
+  highlights: [
+    {
+      title: '专业前 5%',
+      description: '郑州城市职业学院动漫制作技术专业在读，学习稳定，基础扎实。',
+    },
+    {
+      title: '国家励志奖学金',
+      description: '能长期按节点推进任务，做事靠谱，也愿意持续学习。',
+    },
+    {
+      title: '班级运营经验',
+      description: '负责班级群通知、线上讨论和主题活动组织，具备基础社群协同能力。',
+    },
+    {
+      title: '校级比赛二等奖',
+      description: '参加动漫 IP 设计比赛独立完成构思到成稿，对视觉风格有实际积累。',
+    },
+  ],
+  resumeSections: [
+    {
+      id: 'job-target',
+      label: 'Job Target',
+      title: '求职意向',
+      items: [
+        '目标岗位：新媒体运营 / 内容运营 / 社群运营 / 短视频内容助理',
+        '期望薪资：3-6K',
+        '期望城市：深圳',
+        '希望用内容策划、基础剪辑和审美能力补强内容岗位执行力。',
+      ],
+    },
+    {
+      id: 'education',
+      label: 'Education',
+      title: '教育背景',
+      items: [
+        '郑州城市职业学院 · 动漫制作技术 · 大专 · 2023-2026',
+        '专业排名前 5%',
+        '主修课程：影视特效、分镜头设计、三维动画制作',
+        '获得国家励志奖学金。',
+      ],
+    },
+    {
+      id: 'campus-ops',
+      label: 'Campus Operations',
+      title: '校园运营经历',
+      items: [
+        '负责班级日常事务管理与班级群运营，发布通知、组织线上讨论、协调同学参与活动。',
+        '策划并执行主题班会、团日活动，独立完成主题设定到流程安排的全流程。',
+        '与辅导员、授课老师保持高效沟通，协助解决同学实际问题。',
+      ],
+    },
+    {
+      id: 'content-creation',
+      label: 'Content Creation',
+      title: '内容创作经历',
+      items: [
+        '小组作业中承担文案与策划角色，负责选题、结构设计与成文全流程，多次被老师列为优秀案例。',
+        '课程展示中负责视频剪辑与后期，熟练使用剪映完成剪辑、字幕、配乐和节奏控制。',
+        '善于用视觉表达增强内容吸引力，对配色、构图和年轻用户偏好有实际积累。',
+      ],
+    },
+    {
+      id: 'tools',
+      label: 'Tools & Certificates',
+      title: '工具与证书',
+      items: [
+        '文案与策划：选题策划、内容结构设计、用户视角表达',
+        '软件：剪映（熟练）、AE、PS',
+        '普通话二级乙等',
+        '关键词：高效沟通、任务推进、跨角色协同',
+      ],
+    },
   ],
   categories: [
     {
       id: 'editing-video',
-      name: '剪辑视频',
-      description: '用成片节奏、情绪和镜头语言证明基础剪辑能力。',
+      name: '内容剪辑',
+      description: '用成片节奏、情绪和镜头语言展示内容剪辑基础。',
     },
     {
       id: 'ae-packaging',
-      name: 'AE 包装视频',
-      description: '用包装动效、片头和视觉节奏证明 AE 运镜与表达能力。',
+      name: '视觉包装',
+      description: '用包装动效、片头和版式节奏展示视觉表达能力。',
     },
     {
       id: 'commercial-video',
-      name: '商业视频',
-      description: '用品牌或产品向内容证明可以服务实际传播和商业目标。',
+      name: '品牌内容',
+      description: '用品牌向内容展示对传播目标和卖点表达的理解。',
     },
     {
       id: 'dynamic-poster',
-      name: '动态海报',
-      description: '作为加分项，补足视觉表现力与审美完成度。',
+      name: '视觉加分项',
+      description: '作为加分项补足视觉表现力与审美完成度。',
     },
   ],
   works: [
@@ -58,8 +131,8 @@ export const portfolioData: PortfolioData = {
       slug: 'work-1',
       title: '下班后的三十分钟',
       category: 'editing-video',
-      projectType: '剪辑视频',
-      purpose: '证明你会剪',
+      projectType: '内容剪辑案例',
+      purpose: '内容审美与剪辑节奏',
       year: '2026',
       summary: '30 秒竖版治愈系短视频案例，用日常生活动作做情绪剪辑。',
       description:
@@ -75,8 +148,8 @@ export const portfolioData: PortfolioData = {
       slug: 'work-2',
       title: 'BELLE 百丽秋季通勤企划包装（模拟项目）',
       category: 'ae-packaging',
-      projectType: 'AE 包装视频',
-      purpose: '证明你会动效',
+      projectType: '视觉包装案例',
+      purpose: '视觉包装与信息表达',
       year: '2026',
       summary: '以女鞋品牌秋季通勤企划为命题，完成 15 秒栏目包装与动态视觉系统。',
       description:
@@ -93,8 +166,8 @@ export const portfolioData: PortfolioData = {
       slug: 'work-3',
       title: '花西子新品定妆蜜粉短视频（模拟项目）',
       category: 'commercial-video',
-      projectType: '商业视频',
-      purpose: '证明你能赚钱',
+      projectType: '品牌内容案例',
+      purpose: '品牌内容理解',
       year: '2026',
       summary: '以国货美妆品牌新品推广为命题，完成面向小红书 / 视频号的商业短视频。',
       description:
@@ -111,8 +184,8 @@ export const portfolioData: PortfolioData = {
       slug: 'bonus-poster',
       title: '动态海报加分项',
       category: 'dynamic-poster',
-      projectType: '动态海报',
-      purpose: '提升竞争力',
+      projectType: '视觉加分项',
+      purpose: '视觉表现补充',
       year: '2026',
       summary: '作为加分项补一到两张动态海报，强化审美和视觉完成度。',
       description:
@@ -129,7 +202,7 @@ export const portfolioData: PortfolioData = {
     {
       id: 'exp-01',
       title: 'Logo Motion Study',
-      summary: '练习 Logo reveal、线条生长和 easing 节奏，让动效收得更干净。',
+      summary: '补充 Logo reveal、线条生长和 easing 节奏练习，让视觉包装更完整。',
       coverImage: '/covers/ae-motion-02.svg',
       tags: ['Logo Animation', 'Trim Paths', 'Ease'],
       type: '动效练习',
@@ -137,7 +210,7 @@ export const portfolioData: PortfolioData = {
     {
       id: 'exp-02',
       title: 'Subtitle Rhythm Study',
-      summary: '围绕字幕节拍、停顿和呼吸感做信息进场练习，适合竖版内容包装。',
+      summary: '围绕字幕节拍、停顿和呼吸感做信息进场练习，适合短视频内容包装。',
       coverImage: '/covers/short-video-02.svg',
       tags: ['字幕动画', '节奏控制', '竖版包装'],
       type: '剪辑练习',
@@ -145,7 +218,7 @@ export const portfolioData: PortfolioData = {
     {
       id: 'exp-03',
       title: 'Cosmetic Title Motion',
-      summary: '模拟美妆类标题进场和产品信息卡，练习轻盈、干净的品牌动效语言。',
+      summary: '模拟标题进场和产品信息卡，练习轻盈、干净的品牌动效语言。',
       coverImage: '/covers/dynamic-poster-02.svg',
       tags: ['美妆视觉', '标题动效', '信息卡'],
       type: '包装练习',
@@ -154,10 +227,10 @@ export const portfolioData: PortfolioData = {
   references: [
     {
       id: 'ref-01',
-      title: 'Vimeo 参考视频',
+      title: '内容灵感参考视频',
       source: 'Vimeo / 非本人项目',
       summary:
-        '可作为镜头节奏、版式处理或整体氛围的参考来源，但不应作为自己的案例展示，更不能混入作品清单里。',
+        '可作为镜头节奏、版式处理或整体氛围的灵感来源，但不应作为自己的案例展示，更不能混入作品清单里。',
       embedUrl: 'https://player.vimeo.com/video/980153179?h=6c5de8a193',
       href: 'https://player.vimeo.com/video/980153179?h=6c5de8a193',
       note: '建议统一放在 Inspiration / References 模块，并明确标注“参考视频 / 非本人项目 / Source: Vimeo”。',
@@ -165,19 +238,19 @@ export const portfolioData: PortfolioData = {
   ],
   contacts: [
     {
+      label: '手机',
+      value: '15639571728',
+      href: 'tel:15639571728',
+    },
+    {
       label: '邮箱',
-      value: 'wangludi.edit@gmail.com',
-      href: 'mailto:wangludi.edit@gmail.com',
+      value: '3514910940@qq.com',
+      href: 'mailto:3514910940@qq.com',
     },
     {
-      label: '微信',
-      value: 'wangludi-motion',
-      href: 'https://weixin.qq.com/',
-    },
-    {
-      label: '作品平台',
-      value: '小红书 / Bilibili / Behance',
-      href: 'https://www.behance.net/',
+      label: 'QQ',
+      value: '3514910940',
+      href: 'https://wpa.qq.com/msgrd?v=3&uin=3514910940&site=qq&menu=yes',
     },
   ],
 };

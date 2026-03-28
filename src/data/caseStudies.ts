@@ -6,7 +6,7 @@ export const caseStudies: CaseStudy[] = [
     eyebrow: '作品 2 / AE 包装视频 / 模拟项目',
     title: 'BELLE 百丽秋季通勤企划包装',
     subtitle: '15 秒栏目包装模拟案例',
-    purpose: '证明你会动效',
+    purpose: '视觉包装与信息表达',
     coverImage: '/covers/work2-belle-cover.jpg',
     intro:
       '这支案例以 BELLE 百丽的都市通勤系列为参考语境，是我为求职整理的品牌向模拟项目。它放在作品 2，重点想说明自己不只是会剪镜头，也能把字体动效、图形包装和栏目节奏做成完整的一套视觉表达。',
@@ -67,7 +67,7 @@ export const caseStudies: CaseStudy[] = [
     eyebrow: '作品 3 / 商业视频 / 模拟项目',
     title: '花西子新品定妆蜜粉短视频',
     subtitle: '面向小红书 / 视频号的商业短视频模拟案例',
-    purpose: '证明你能赚钱',
+    purpose: '品牌内容理解',
     coverImage: '/covers/work3-huaxizi-cover.jpg',
     intro:
       '这支案例以花西子新品推广为参考语境，是我为求职整理的商业向模拟项目。它放在作品 3，因为最适合讲“商业内容思维”，让对方看到我不只是会做氛围，也会围绕产品卖点、平台传播和转化目标去组织视频。',

@@ -54,6 +54,18 @@ export interface HeroReel {
   highlights: string[];
 }
 
+export interface ResumeHighlight {
+  title: string;
+  description: string;
+}
+
+export interface ResumeSection {
+  id: string;
+  label: string;
+  title: string;
+  items: string[];
+}
+
 export interface ExperimentItem {
   id: string;
   title: string;
@@ -86,6 +98,8 @@ export interface PortfolioData {
   };
   heroReel: HeroReel;
   skills: SkillItem[];
+  highlights: ResumeHighlight[];
+  resumeSections: ResumeSection[];
   categories: CategoryItem[];
   works: WorkItem[];
   experiments: ExperimentItem[];

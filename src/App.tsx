@@ -35,6 +35,17 @@ function resolvePublicPath(value?: string) {
   return `${BASE_URL}${value.replace(/^\/+/, '')}`;
 }
 
+function getAnchorProps(href: string) {
+  if (href.startsWith('http://') || href.startsWith('https://')) {
+    return {
+      target: '_blank',
+      rel: 'noreferrer',
+    };
+  }
+
+  return {};
+}
+
 function SceneFrame({
   scene,
   image,
@@ -211,6 +222,7 @@ function App() {
   const activeCaseStudy = activeSlug ? caseStudyMap.get(activeSlug) : undefined;
   const primaryWorks = portfolioData.works.filter((work) => !work.isBonus);
   const bonusWork = portfolioData.works.find((work) => work.isBonus);
+  const [jobTarget, ...resumeDetails] = portfolioData.resumeSections;
 
   const navigateTo = (hash: string) => {
     window.location.hash = hash;
@@ -277,21 +289,15 @@ function App() {
             </button>
           </div>
 
-          <p className="hero-inline-note">模拟项目均已明确标注，不把参考视频混入本人案例。</p>
+          <p className="hero-inline-note">{portfolioData.heroReel.description}</p>
 
           <div className="hero-fact-row">
-            <article className="fact-card">
-              <span>求职方向</span>
-              <strong>视频剪辑 / AE 动效 / 内容设计</strong>
-            </article>
-            <article className="fact-card">
-              <span>核心软件</span>
-              <strong>PR / AE / PS / AI</strong>
-            </article>
-            <article className="fact-card">
-              <span>能力重点</span>
-              <strong>情绪剪辑、包装动效、品牌模拟项目</strong>
-            </article>
+            {portfolioData.profile.stats.map((item) => (
+              <article key={item.label} className="fact-card">
+                <span>{item.label}</span>
+                <strong>{item.value}</strong>
+              </article>
+            ))}
           </div>
 
           <div className="hero-subgrid">
@@ -349,7 +355,7 @@ function App() {
             <h2>主作品</h2>
           </div>
           <p className="section-description">
-            首页只保留最关键的三支主作品，先让面试官快速判断你会剪、会动效，也理解商业内容。
+            首页先展示最能体现内容表达、基础剪辑和视觉包装能力的作品，方便招聘方快速判断实际产出水平。
           </p>
         </div>
 
@@ -431,6 +437,76 @@ function App() {
         ) : null}
       </RevealSection>
 
+      <RevealSection id="resume" className="section-block">
+        <div className="section-head">
+          <div>
+            <p className="section-kicker">Resume Snapshot</p>
+            <h2>简历亮点</h2>
+          </div>
+          <p className="section-description">
+            把对找工作最有帮助的信息放在作品后面，招聘方不用切到简历文件也能看到核心背景。
+          </p>
+        </div>
+
+        <div className="works-grid">
+          {portfolioData.highlights.map((highlight) => (
+            <article key={highlight.title} className="detail-card">
+              <p className="detail-label">Highlight</p>
+              <h2>{highlight.title}</h2>
+              <p>{highlight.description}</p>
+            </article>
+          ))}
+        </div>
+      </RevealSection>
+
+      <RevealSection className="section-block">
+        <div className="section-head">
+          <div>
+            <p className="section-kicker">Core Strengths</p>
+            <h2>能力标签</h2>
+          </div>
+          <p className="section-description">
+            这部分把内容、社群、剪辑和审美拆开说清楚，避免作品很多但岗位匹配点不够直接。
+          </p>
+        </div>
+
+        <div className="project-grid">
+          {portfolioData.skills.map((skill) => (
+            <article key={skill.name} className="detail-card">
+              <p className="detail-label">Strength</p>
+              <h2>{skill.name}</h2>
+              <p>{skill.detail}</p>
+            </article>
+          ))}
+        </div>
+      </RevealSection>
+
+      <RevealSection className="section-block">
+        <div className="section-head">
+          <div>
+            <p className="section-kicker">Experience</p>
+            <h2>经历摘要</h2>
+          </div>
+          <p className="section-description">
+            作品之外，补充校园运营、内容创作和工具能力，帮助岗位判断更完整。
+          </p>
+        </div>
+
+        <div className="about-grid">
+          {portfolioData.resumeSections.map((section) => (
+            <article key={section.id} className="detail-card">
+              <p className="detail-label">{section.label}</p>
+              <h2>{section.title}</h2>
+              <ul className="detail-list">
+                {section.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </RevealSection>
+
       <RevealSection id="experiments" className="section-block">
         <div className="section-head">
           <div>
@@ -438,7 +514,7 @@ function App() {
             <h2>动效练习</h2>
           </div>
           <p className="section-description">
-            这个模块不和主项目抢权重，专门用来补充 Logo 动画、字幕节奏和标题动效等短小练习。
+            这个模块不和主项目抢权重，主要补充字幕节奏、标题包装和基础动效能力。
           </p>
         </div>
 
@@ -472,7 +548,7 @@ function App() {
         <div className="section-head">
           <div>
             <p className="section-kicker">References</p>
-            <h2>参考视频</h2>
+            <h2>灵感参考</h2>
           </div>
           <p className="section-description">
             别人的视频可以放，但只能作为灵感来源或节奏参考，必须清楚标注为非本人项目。
@@ -523,9 +599,9 @@ function App() {
           <div className="about-copy">
             <p className="section-kicker">About</p>
             <h2>关于我</h2>
-            <p>{portfolioData.profile.tagline}</p>
+            <p>{portfolioData.profile.intro}</p>
             <div className="tag-row">
-              {['PR', 'AE', 'PS', 'AI 工具', '视频剪辑', '动效设计'].map((tag) => (
+              {['剪映', 'AE', 'PS', '内容策划', '社群互动', '视觉表达'].map((tag) => (
                 <span key={tag} className="tag">
                   {tag}
                 </span>
@@ -540,7 +616,7 @@ function App() {
 
           <div className="contact-list">
             {portfolioData.contacts.map((contact) => (
-              <a key={contact.label} className="contact-card" href={contact.href} target="_blank" rel="noreferrer">
+              <a key={contact.label} className="contact-card" href={contact.href} {...getAnchorProps(contact.href)}>
                 <span>{contact.label}</span>
                 <strong>{contact.value}</strong>
               </a>
@@ -558,15 +634,11 @@ function App() {
           <p className="section-kicker">About Me</p>
           <h1>{portfolioData.profile.name}</h1>
           <p className="hero-role">{portfolioData.profile.role}</p>
-          <p className="hero-copy-text">
-            我是动漫设计专业背景的应届毕业生，希望应聘视频剪辑和 AE 动效设计相关岗位。
-            我会更关注画面氛围、人物情绪和整体节奏，也希望把这种视觉感受继续延伸到品牌内容和短视频里。
-            作品集里的案例分成会剪、会动效、懂商业和视觉加分项四层，是为了让面试官更快理解我的能力结构。
-          </p>
+          <p className="hero-copy-text">{portfolioData.profile.intro}</p>
         </div>
 
         <div className="about-page-side">
-          <img src={resolvePublicPath(healingProject.coverImage)} alt="王露迪头像素材" className="about-portrait" />
+          <img src={resolvePublicPath(healingProject.coverImage)} alt={`${portfolioData.profile.name} 头像素材`} className="about-portrait" />
         </div>
       </RevealSection>
 
@@ -575,7 +647,7 @@ function App() {
           <p className="detail-label">Skills</p>
           <h2>技能标签</h2>
           <div className="tag-row">
-            {['Premiere Pro', 'After Effects', 'Photoshop', 'Illustrator', 'AI 工具辅助', '短视频剪辑'].map(
+            {['剪映', 'After Effects', 'Photoshop', '内容策划', '社群互动', '视觉表达'].map(
               (tag) => (
                 <span key={tag} className="tag">
                   {tag}
@@ -585,27 +657,63 @@ function App() {
           </div>
         </div>
 
-        <div className="detail-card">
-          <p className="detail-label">Career Direction</p>
-          <h2>我想做的岗位</h2>
-          <ul className="detail-list">
-            <li>视频剪辑 / 内容剪辑</li>
-            <li>AE 动效设计 / 包装设计</li>
-            <li>品牌内容设计 / 新媒体视觉</li>
-          </ul>
-        </div>
+        {jobTarget ? (
+          <div className="detail-card">
+            <p className="detail-label">{jobTarget.label}</p>
+            <h2>{jobTarget.title}</h2>
+            <ul className="detail-list">
+              {jobTarget.items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
 
         <div className="detail-card">
           <p className="detail-label">Contacts</p>
           <h2>联系方式</h2>
           <div className="contact-list compact">
             {portfolioData.contacts.map((contact) => (
-              <a key={contact.label} className="contact-card" href={contact.href} target="_blank" rel="noreferrer">
+              <a key={contact.label} className="contact-card" href={contact.href} {...getAnchorProps(contact.href)}>
                 <span>{contact.label}</span>
                 <strong>{contact.value}</strong>
               </a>
             ))}
           </div>
+        </div>
+      </RevealSection>
+
+      <RevealSection className="about-grid">
+        {resumeDetails.map((section) => (
+          <div key={section.id} className="detail-card">
+            <p className="detail-label">{section.label}</p>
+            <h2>{section.title}</h2>
+            <ul className="detail-list">
+              {section.items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </RevealSection>
+
+      <RevealSection className="about-grid">
+        <div className="detail-card">
+          <p className="detail-label">Personal Traits</p>
+          <h2>个人特质</h2>
+          <ul className="detail-list">
+            <li>踏实稳定：成绩保持班级前列，获得国家励志奖学金。</li>
+            <li>用户敏感：长期接触年轻群体，了解用户互动和内容偏好。</li>
+            <li>执行力强：习惯按节点推进任务，适应多任务协同工作。</li>
+          </ul>
+        </div>
+
+        <div className="detail-card">
+          <p className="detail-label">Why Me</p>
+          <h2>适合岗位的原因</h2>
+          <p>
+            我不是只会写文案或只会剪视频，而是能把选题、表达、执行和基础视觉一起串起来。对新媒体运营岗位来说，这意味着我既能配合内容生产，也能在社群互动、活动通知和短视频表达上承担实际执行工作。
+          </p>
         </div>
       </RevealSection>
     </>
@@ -1002,8 +1110,8 @@ function App() {
               <button type="button" className="nav-button" onClick={() => jumpToHomeSection('works')}>
                 作品
               </button>
-              <button type="button" className="nav-button" onClick={() => jumpToHomeSection('references')}>
-                参考
+              <button type="button" className="nav-button" onClick={() => jumpToHomeSection('resume')}>
+                经历
               </button>
             </>
           ) : (
@@ -1011,8 +1119,8 @@ function App() {
               <button type="button" className="nav-button" onClick={() => scrollToSection('works')}>
                 作品
               </button>
-              <button type="button" className="nav-button" onClick={() => scrollToSection('experiments')}>
-                实验
+              <button type="button" className="nav-button" onClick={() => scrollToSection('resume')}>
+                经历
               </button>
               <button type="button" className="nav-button" onClick={() => scrollToSection('references')}>
                 参考
