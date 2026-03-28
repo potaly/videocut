@@ -1,0 +1,9 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" rx="40" fill="#FFF4F6"/>
+  <rect x="150" y="72" width="500" height="356" rx="36" fill="#FFFDFB"/>
+  <circle cx="226" cy="136" r="54" fill="#F6B7C8"/>
+  <circle cx="584" cy="352" r="72" fill="#D4EDE2"/>
+  <text x="234" y="210" fill="#2C232E" font-family="Arial, sans-serif" font-size="62" font-weight="700">Bloom</text>
+  <text x="236" y="256" fill="#8A6C78" font-family="Arial, sans-serif" font-size="26">animated poster design</text>
+  <rect x="236" y="300" width="144" height="42" rx="21" fill="#2C232E"/>
+</svg>

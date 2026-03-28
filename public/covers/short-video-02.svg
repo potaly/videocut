@@ -1,0 +1,12 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" rx="40" fill="#FFF6EE"/>
+  <path d="M0 402C138 348 245 316 392 332C540 348 612 456 800 422V500H0V402Z" fill="#F4D7C4"/>
+  <circle cx="638" cy="132" r="102" fill="#BFE2D3"/>
+  <rect x="86" y="84" width="628" height="330" rx="34" fill="#FFFFFF"/>
+  <rect x="126" y="122" width="256" height="170" rx="26" fill="#F6E3E5"/>
+  <rect x="412" y="122" width="262" height="18" rx="9" fill="#C9DED4"/>
+  <rect x="412" y="156" width="208" height="14" rx="7" fill="#E4D7D0"/>
+  <rect x="412" y="184" width="182" height="14" rx="7" fill="#E4D7D0"/>
+  <rect x="412" y="244" width="142" height="42" rx="21" fill="#2D2530"/>
+  <text x="118" y="358" fill="#2D2530" font-family="Arial, sans-serif" font-size="48" font-weight="700">Campus Vlog Cut</text>
+</svg>

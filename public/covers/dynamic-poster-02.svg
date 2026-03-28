@@ -1,0 +1,8 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" rx="40" fill="#FFF8F0"/>
+  <rect x="120" y="82" width="560" height="336" rx="34" fill="#26202B"/>
+  <circle cx="240" cy="166" r="64" fill="#F1B3C5"/>
+  <circle cx="532" cy="318" r="92" fill="#A9D9C5"/>
+  <text x="182" y="246" fill="#FFFAFB" font-family="Arial, sans-serif" font-size="70" font-weight="700">03</text>
+  <text x="182" y="314" fill="#D5C4CB" font-family="Arial, sans-serif" font-size="36">Music Festival Countdown</text>
+</svg>

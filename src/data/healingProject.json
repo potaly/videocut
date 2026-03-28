@@ -1,0 +1,156 @@
+{
+  "slug": "work-1",
+  "title": "下班后的三十分钟",
+  "subtitle": "30 秒竖版治愈系短视频案例",
+  "mood": ["温柔", "安静", "暖色调", "下班后的松弛感"],
+  "ratio": "9:16",
+  "duration": "30s",
+  "intro": "这支片子是我想放在作品集第一页的剪辑案例。它围绕“下班回家后的情绪回落”展开，用开门、开灯、倒水、吃饭、听歌、发呆这些日常动作，把疲惫慢慢过渡到安静。",
+  "concept": "我希望它看起来不是模板式的短视频，而是一支有呼吸感、有陪伴感的情绪片。节奏偏慢，暖色灯光和窗边夜景是主要氛围来源，字幕像心里话一样一段段落下来。",
+  "coverImage": "/hero-photo.jpg",
+  "referenceBoard": "/reference-board.png",
+  "outputVideo": "/exports/work1-healing-short.mp4",
+  "renderCommand": "npm run render:work1",
+  "projectNature": "个人项目 / 生活方式短视频 / 9:16 竖版",
+  "responsibilities": ["剪辑", "字幕设计", "氛围节奏控制", "导出规格设计"],
+  "technicalPoints": ["慢节奏呼吸感", "暖色调统一", "环境音留白", "字幕与镜头情绪同步"],
+  "designThinking": [
+    "用一连串很小的生活动作去承接“下班后的情绪回落”，让观众在日常里感到被安慰。",
+    "镜头顺序尽量从室外疲惫过渡到室内安静，形成明确的情绪转场。",
+    "字幕像心里话一样一段段出现，不抢画面，但会陪着节奏慢慢落下。"
+  ],
+  "tools": ["Premiere Pro", "After Effects", "Photoshop"],
+  "interviewTips": [
+    "这支作品适合最先播放，因为它能先证明我对节奏和情绪的控制。",
+    "面试时我会重点讲为什么要把镜头顺序设计成“回家动作链”。",
+    "如果继续深聊，也可以讲字幕、暖色氛围和环境声在这支片子里的作用。"
+  ],
+  "exportSpecs": [
+    { "label": "导出尺寸", "value": "1080 x 1920" },
+    { "label": "帧率建议", "value": "30 FPS" },
+    { "label": "总时长", "value": "30 秒 / 900 帧" },
+    { "label": "字幕安全区", "value": "距底部 180-260 px" },
+    { "label": "推荐编码", "value": "MP4 H.264 / AAC" },
+    { "label": "音乐风格", "value": "Lo-fi / Piano / 78-84 BPM" }
+  ],
+  "toolchain": [
+    {
+      "title": "网页案例页",
+      "description": "在作品集首页中可点击进入，负责展示项目概念、分镜、字幕与导出信息。"
+    },
+    {
+      "title": "本地渲染脚本",
+      "description": "用 Node + ffmpeg-static 直接从参考素材图生成 MP4，可作为交付版或作品集预览视频。"
+    },
+    {
+      "title": "Premiere Pro / After Effects",
+      "description": "后续如果要继续精修，可以基于这个分镜继续补声音设计、包装动效和音乐。"
+    },
+    {
+      "title": "求职展示逻辑",
+      "description": "这支片子放在作品 1，是因为它最适合先证明我有镜头感觉，也能把情绪节奏剪清楚。"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "title": "下班走路背影",
+      "duration": 3,
+      "subtitle": ["不是每一天都很顺利，"],
+      "note": "用街道环境和人物背影开场，建议轻微慢推，先把疲惫感放进画面。",
+      "transition": "黑场淡入",
+      "crop": { "x": 20, "y": 10, "scale": 1.26 },
+      "region": { "x": 0, "y": 0, "width": 448, "height": 240 }
+    },
+    {
+      "id": "scene-02",
+      "title": "开门",
+      "duration": 3,
+      "subtitle": ["但下班后的这三十分钟，"],
+      "note": "门把手的动作像情绪切换点，适合接在脚步声之后，顺势进入室内。",
+      "transition": "动作切换",
+      "crop": { "x": 77, "y": 10, "scale": 1.28 },
+      "region": { "x": 448, "y": 0, "width": 448, "height": 240 }
+    },
+    {
+      "id": "scene-03",
+      "title": "开灯",
+      "duration": 3,
+      "subtitle": ["至少是属于自己的。"],
+      "note": "建议加暖光渐亮效果，这一镜负责把空间气氛从冷切到暖。",
+      "transition": "柔和叠化",
+      "crop": { "x": 21, "y": 31, "scale": 1.28 },
+      "region": { "x": 0, "y": 240, "width": 448, "height": 240 }
+    },
+    {
+      "id": "scene-04",
+      "title": "放包",
+      "duration": 3,
+      "subtitle": ["关掉白天的疲惫，"],
+      "note": "包放下来的瞬间是“卸下”的视觉符号，适合让动作慢半拍。",
+      "transition": "停顿 4 帧",
+      "crop": { "x": 79, "y": 30, "scale": 1.24 },
+      "region": { "x": 448, "y": 240, "width": 448, "height": 240 }
+    },
+    {
+      "id": "scene-05",
+      "title": "倒水",
+      "duration": 3,
+      "subtitle": ["把情绪留给晚风和灯光。"],
+      "note": "保留倒水声和玻璃碰撞声，能让片子更有生活触感。",
+      "transition": "L-cut 音频先行",
+      "crop": { "x": 22, "y": 51, "scale": 1.22 },
+      "region": { "x": 0, "y": 480, "width": 448, "height": 239 }
+    },
+    {
+      "id": "scene-06",
+      "title": "晚饭",
+      "duration": 3,
+      "subtitle": ["一顿简单的晚饭，"],
+      "note": "建议颜色更暖一点，食物和笑意都可以成为温柔情绪的支点。",
+      "transition": "暖色闪白",
+      "crop": { "x": 78, "y": 50, "scale": 1.2 },
+      "region": { "x": 448, "y": 480, "width": 448, "height": 239 }
+    },
+    {
+      "id": "scene-07",
+      "title": "戴耳机",
+      "duration": 3,
+      "subtitle": ["一首刚刚好的歌，"],
+      "note": "适合在音乐入拍时切进来，停留 1 秒让情绪真正安静下来。",
+      "transition": "音乐点切",
+      "crop": { "x": 22, "y": 70, "scale": 1.24 },
+      "region": { "x": 0, "y": 719, "width": 448, "height": 239 }
+    },
+    {
+      "id": "scene-08",
+      "title": "窗边夜景",
+      "duration": 3,
+      "subtitle": ["一个终于安静下来的夜晚。"],
+      "note": "夜景可以略微虚化，人物保持静止，制造“呼吸感”的留白。",
+      "transition": "缓慢淡化",
+      "crop": { "x": 78, "y": 70, "scale": 1.3 },
+      "region": { "x": 448, "y": 719, "width": 448, "height": 239 }
+    },
+    {
+      "id": "scene-09",
+      "title": "房间暖灯",
+      "duration": 3,
+      "subtitle": ["原来真正治愈人的，", "从来不是什么大道理，"],
+      "note": "这一镜建议作为情绪峰值，暖灯和阅读姿态会让片子更柔软。",
+      "transition": "慢推镜头",
+      "crop": { "x": 22, "y": 90, "scale": 1.24 },
+      "region": { "x": 0, "y": 958, "width": 448, "height": 240 }
+    },
+    {
+      "id": "scene-10",
+      "title": "沙发坐下",
+      "duration": 3,
+      "subtitle": ["而是那些", "一点点把自己捡回来的瞬间。"],
+      "note": "结尾多停一点，最后 8 帧慢慢淡黑，给观众留出回味。",
+      "transition": "尾帧淡出",
+      "crop": { "x": 79, "y": 90, "scale": 1.24 },
+      "region": { "x": 448, "y": 958, "width": 448, "height": 240 }
+    }
+  ]
+}

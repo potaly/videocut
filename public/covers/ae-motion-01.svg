@@ -1,0 +1,11 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" rx="40" fill="#F9F1F6"/>
+  <rect x="82" y="86" width="636" height="328" rx="38" fill="#241C28"/>
+  <circle cx="176" cy="170" r="56" fill="#F7B9C9"/>
+  <circle cx="622" cy="330" r="78" fill="#BFE5D4"/>
+  <rect x="164" y="138" width="232" height="18" rx="9" fill="#F6D7DF"/>
+  <rect x="164" y="172" width="180" height="18" rx="9" fill="#F6D7DF"/>
+  <path d="M462 178L598 136V220L462 178Z" fill="#FFF7F3"/>
+  <text x="160" y="292" fill="#FFF9FB" font-family="Arial, sans-serif" font-size="58" font-weight="700">AE Opening</text>
+  <text x="160" y="344" fill="#CCB9C2" font-family="Arial, sans-serif" font-size="26">Motion graphics / typography / intro</text>
+</svg>

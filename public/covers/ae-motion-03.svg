@@ -1,0 +1,9 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" rx="40" fill="#F8F3ED"/>
+  <circle cx="182" cy="126" r="86" fill="#F4CFD8"/>
+  <circle cx="620" cy="384" r="112" fill="#D1EAE0"/>
+  <rect x="116" y="96" width="568" height="308" rx="32" fill="#FFFDF9"/>
+  <path d="M178 276C246 166 308 128 384 128C460 128 530 168 622 278C526 338 454 372 376 372C298 372 236 338 178 276Z" fill="#28202B"/>
+  <path d="M256 268C302 206 342 184 392 184C442 184 486 208 542 272C480 310 428 332 378 332C328 332 290 310 256 268Z" fill="#FFF7F1"/>
+  <text x="166" y="156" fill="#2C232E" font-family="Arial, sans-serif" font-size="36" font-weight="700">Event KV Motion</text>
+</svg>

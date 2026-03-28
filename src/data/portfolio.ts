@@ -1,0 +1,183 @@
+import type { PortfolioData } from '../types';
+
+export const portfolioData: PortfolioData = {
+  profile: {
+    name: '王露迪',
+    role: '视频剪辑 / AE 动效设计',
+    tagline: '动漫设计专业背景，正在寻找能把审美和内容一起做好的视频岗位。',
+    intro:
+      '我是王露迪，动漫设计专业背景，平时会更关注画面情绪、人物氛围和整体视觉节奏，也希望把这种审美能力延续到视频剪辑和动效包装里。这套作品集不是简单罗列作品，而是按求职逻辑整理成“会剪、会动效、能做商业内容、还有视觉加分项”四个层次，方便在面试里更清楚地表达自己。',
+    location: '专业背景 · 动漫设计 / 求职方向 · 视频剪辑与 AE 动效',
+    availability: '适合投递剪辑、动效设计、内容设计、新媒体视觉相关岗位',
+    stats: [
+      { label: '专业背景', value: '动漫设计 / 画面审美与角色感较强' },
+      { label: '核心软件', value: 'PR / AE / PS / AI' },
+      { label: '求职方向', value: '视频剪辑 / AE 动效 / 内容设计' },
+    ],
+  },
+  heroReel: {
+    title: 'Demo Reel 2026',
+    subtitle: '由作品 1、作品 2、作品 3 混剪而成的首页展示片段',
+    description:
+      '首页首屏先播放一条真正的混剪 Reel，让招聘方在十几秒内先看到剪辑、AE 包装和商业内容三种能力，再继续往下看单个案例。',
+    videoUrl: '/exports/demo-reel-2026.mp4',
+    poster: '/covers/demo-reel-cover.jpg',
+    highlights: ['首页混剪 Reel', '视频优先', '模拟项目已标注', '适配大陆求职语境'],
+  },
+  skills: [
+    { name: '视频剪辑', detail: '节奏控制、镜头衔接、情绪铺陈、字幕节拍' },
+    { name: 'AE 动效', detail: '片头包装、字体动效、信息动画、转场增强' },
+    { name: '商业内容', detail: '卖点梳理、品牌表达、平台适配、转化意识' },
+    { name: '视觉加分项', detail: '动态海报、KV 延展、审美统一、内容包装' },
+  ],
+  categories: [
+    {
+      id: 'editing-video',
+      name: '剪辑视频',
+      description: '用成片节奏、情绪和镜头语言证明基础剪辑能力。',
+    },
+    {
+      id: 'ae-packaging',
+      name: 'AE 包装视频',
+      description: '用包装动效、片头和视觉节奏证明 AE 运镜与表达能力。',
+    },
+    {
+      id: 'commercial-video',
+      name: '商业视频',
+      description: '用品牌或产品向内容证明可以服务实际传播和商业目标。',
+    },
+    {
+      id: 'dynamic-poster',
+      name: '动态海报',
+      description: '作为加分项，补足视觉表现力与审美完成度。',
+    },
+  ],
+  works: [
+    {
+      id: 'work-01',
+      slug: 'work-1',
+      title: '下班后的三十分钟',
+      category: 'editing-video',
+      projectType: '剪辑视频',
+      purpose: '证明你会剪',
+      year: '2026',
+      summary: '30 秒竖版治愈系短视频案例，用日常生活动作做情绪剪辑。',
+      description:
+        '这支作品更像我对“情绪剪辑”的一次集中表达，适合作为面试开场第一支，先让人看到我的镜头感觉和内容审美。',
+      coverImage: '/reference-board.png',
+      skillTags: ['治愈系短片', '情绪剪辑', '竖版内容', '字幕节奏'],
+      videoUrl: '/exports/work1-healing-short.mp4',
+      detailHash: '#/works/work-1',
+      status: 'ready',
+    },
+    {
+      id: 'work-02',
+      slug: 'work-2',
+      title: 'BELLE 百丽秋季通勤企划包装（模拟项目）',
+      category: 'ae-packaging',
+      projectType: 'AE 包装视频',
+      purpose: '证明你会动效',
+      year: '2026',
+      summary: '以女鞋品牌秋季通勤企划为命题，完成 15 秒栏目包装与动态视觉系统。',
+      description:
+        '以百丽品牌语境为参考做的模拟项目，重点想体现我不只是会剪镜头，也能把字体、图形和栏目气质做成完整的动态视觉。',
+      coverImage: '/covers/work2-belle-cover.jpg',
+      skillTags: ['After Effects', '百丽风格', '字体动效', '栏目包装'],
+      videoUrl: '/exports/work2-ae-packaging.mp4',
+      detailHash: '#/works/work-2',
+      renderCommand: 'npm run render:work2',
+      status: 'ready',
+    },
+    {
+      id: 'work-03',
+      slug: 'work-3',
+      title: '花西子新品定妆蜜粉短视频（模拟项目）',
+      category: 'commercial-video',
+      projectType: '商业视频',
+      purpose: '证明你能赚钱',
+      year: '2026',
+      summary: '以国货美妆品牌新品推广为命题，完成面向小红书 / 视频号的商业短视频。',
+      description:
+        '以花西子品牌语境为参考做的模拟项目，想说明我理解商业内容不只是好看，还要围绕卖点、平台和传播目标去组织视频。',
+      coverImage: '/covers/work3-huaxizi-cover.jpg',
+      skillTags: ['国货美妆', '商业表达', '卖点梳理', '平台转化'],
+      videoUrl: '/exports/work3-commercial-video.mp4',
+      detailHash: '#/works/work-3',
+      renderCommand: 'npm run render:work3',
+      status: 'ready',
+    },
+    {
+      id: 'work-04',
+      slug: 'bonus-poster',
+      title: '动态海报加分项',
+      category: 'dynamic-poster',
+      projectType: '动态海报',
+      purpose: '提升竞争力',
+      year: '2026',
+      summary: '作为加分项补一到两张动态海报，强化审美和视觉完成度。',
+      description:
+        '我把动态海报放在最后，是希望它作为视觉加分项出现，补充版式、配色和轻动效能力，而不是喧宾夺主。',
+      coverImage: '/covers/dynamic-poster-01.svg',
+      skillTags: ['动态海报', '轻动效', '氛围包装', '视觉加分'],
+      videoUrl: '',
+      detailHash: '#/works/bonus-poster',
+      status: 'ready',
+      isBonus: true,
+    },
+  ],
+  experiments: [
+    {
+      id: 'exp-01',
+      title: 'Logo Motion Study',
+      summary: '练习 Logo reveal、线条生长和 easing 节奏，让动效收得更干净。',
+      coverImage: '/covers/ae-motion-02.svg',
+      tags: ['Logo Animation', 'Trim Paths', 'Ease'],
+      type: '动效练习',
+    },
+    {
+      id: 'exp-02',
+      title: 'Subtitle Rhythm Study',
+      summary: '围绕字幕节拍、停顿和呼吸感做信息进场练习，适合竖版内容包装。',
+      coverImage: '/covers/short-video-02.svg',
+      tags: ['字幕动画', '节奏控制', '竖版包装'],
+      type: '剪辑练习',
+    },
+    {
+      id: 'exp-03',
+      title: 'Cosmetic Title Motion',
+      summary: '模拟美妆类标题进场和产品信息卡，练习轻盈、干净的品牌动效语言。',
+      coverImage: '/covers/dynamic-poster-02.svg',
+      tags: ['美妆视觉', '标题动效', '信息卡'],
+      type: '包装练习',
+    },
+  ],
+  references: [
+    {
+      id: 'ref-01',
+      title: 'Vimeo 参考视频',
+      source: 'Vimeo / 非本人项目',
+      summary:
+        '可作为镜头节奏、版式处理或整体氛围的参考来源，但不应作为自己的案例展示，更不能混入作品清单里。',
+      embedUrl: 'https://player.vimeo.com/video/980153179?h=6c5de8a193',
+      href: 'https://player.vimeo.com/video/980153179?h=6c5de8a193',
+      note: '建议统一放在 Inspiration / References 模块，并明确标注“参考视频 / 非本人项目 / Source: Vimeo”。',
+    },
+  ],
+  contacts: [
+    {
+      label: '邮箱',
+      value: 'wangludi.edit@gmail.com',
+      href: 'mailto:wangludi.edit@gmail.com',
+    },
+    {
+      label: '微信',
+      value: 'wangludi-motion',
+      href: 'https://weixin.qq.com/',
+    },
+    {
+      label: '作品平台',
+      value: '小红书 / Bilibili / Behance',
+      href: 'https://www.behance.net/',
+    },
+  ],
+};

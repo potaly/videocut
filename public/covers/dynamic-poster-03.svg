@@ -1,0 +1,9 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" rx="40" fill="#F8F4EE"/>
+  <rect x="102" y="78" width="596" height="344" rx="38" fill="#FFFBF6"/>
+  <rect x="330" y="156" width="144" height="126" rx="18" fill="#2B212D"/>
+  <rect x="318" y="136" width="168" height="34" rx="17" fill="#F4C5D1"/>
+  <circle cx="228" cy="162" r="56" fill="#DDEFE7"/>
+  <circle cx="570" cy="336" r="72" fill="#F6D2D8"/>
+  <text x="168" y="356" fill="#2B222E" font-family="Arial, sans-serif" font-size="48" font-weight="700">Gift Box Motion Poster</text>
+</svg>

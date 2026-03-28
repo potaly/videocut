@@ -1,0 +1,11 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" rx="40" fill="#FCE9E9"/>
+  <circle cx="150" cy="128" r="96" fill="#F7B8C6"/>
+  <circle cx="678" cy="390" r="120" fill="#DCEFE6"/>
+  <rect x="118" y="118" width="560" height="264" rx="34" fill="#FFF8F3"/>
+  <rect x="158" y="164" width="204" height="18" rx="9" fill="#F1C9CF"/>
+  <rect x="158" y="202" width="312" height="14" rx="7" fill="#E8DBD1"/>
+  <rect x="158" y="230" width="272" height="14" rx="7" fill="#E8DBD1"/>
+  <rect x="158" y="270" width="134" height="44" rx="22" fill="#282029"/>
+  <text x="425" y="330" fill="#2B232E" font-family="Arial, sans-serif" font-size="54" font-weight="700">Short Reel</text>
+</svg>
