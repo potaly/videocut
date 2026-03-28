@@ -249,10 +249,6 @@ function App() {
     setModalSource({ title, type: 'video', src, poster });
   };
 
-  const openReferenceModal = (title: string, src: string) => {
-    setModalSource({ title, type: 'iframe', src });
-  };
-
   const renderHome = () => (
     <>
       <RevealSection id="home" className="hero-layout">
@@ -466,7 +462,7 @@ function App() {
             <h2>能力标签</h2>
           </div>
           <p className="section-description">
-            这部分把剪辑、后期、内容策划和审美拆开说清楚，避免作品很多但岗位匹配点不够直接。
+            这部分把剪辑、字幕配乐、内容整理和审美拆开说清楚，避免作品很多但岗位匹配点不够直接。
           </p>
         </div>
 
@@ -488,7 +484,7 @@ function App() {
             <h2>经历摘要</h2>
           </div>
           <p className="section-description">
-            作品之外，补充校园运营、内容创作和工具能力，帮助岗位判断更完整。
+            作品之外，补充和视频剪辑岗位直接相关的教育背景、实践经历和后期能力。
           </p>
         </div>
 
@@ -544,56 +540,6 @@ function App() {
         </div>
       </RevealSection>
 
-      <RevealSection id="references" className="section-block">
-        <div className="section-head">
-          <div>
-            <p className="section-kicker">References</p>
-            <h2>灵感参考</h2>
-          </div>
-          <p className="section-description">
-            别人的视频可以放，但只能作为灵感来源或节奏参考，必须清楚标注为非本人项目。
-          </p>
-        </div>
-
-        {portfolioData.references.map((reference) => (
-          <article key={reference.id} className="reference-card">
-            <div className="reference-embed">
-              <iframe
-                title={reference.title}
-                src={reference.embedUrl}
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                allowFullScreen
-                referrerPolicy="strict-origin-when-cross-origin"
-              />
-            </div>
-
-            <div className="reference-copy">
-              <div className="reference-mark">Reference Only</div>
-              <h3>{reference.title}</h3>
-              <p className="card-summary">{reference.summary}</p>
-              <p className="reference-note">{reference.note}</p>
-              <div className="card-actions">
-                <button
-                  type="button"
-                  className="text-link"
-                  onClick={() => openReferenceModal(reference.title, reference.embedUrl)}
-                >
-                  弹窗查看
-                </button>
-                <a className="text-link" href={reference.href} target="_blank" rel="noreferrer">
-                  打开来源
-                </a>
-              </div>
-              <div className="tag-row">
-                <span className="tag">{reference.source}</span>
-                <span className="tag">灵感来源</span>
-                <span className="tag">不计入本人作品</span>
-              </div>
-            </div>
-          </article>
-        ))}
-      </RevealSection>
-
       <RevealSection id="about-preview" className="section-block">
         <div className="about-preview">
           <div className="about-copy">
@@ -601,7 +547,7 @@ function App() {
             <h2>关于我</h2>
             <p>{portfolioData.profile.intro}</p>
             <div className="tag-row">
-              {['剪映', 'AE', 'PS', '视频剪辑', '后期处理', '视觉表达'].map((tag) => (
+              {['剪映', 'AE', 'PS', '视频剪辑', '字幕配乐', '视觉表达'].map((tag) => (
                 <span key={tag} className="tag">
                   {tag}
                 </span>
@@ -647,7 +593,7 @@ function App() {
           <p className="detail-label">Skills</p>
           <h2>技能标签</h2>
           <div className="tag-row">
-            {['剪映', 'After Effects', 'Photoshop', '视频剪辑', '后期处理', '视觉表达'].map(
+            {['剪映', 'After Effects', 'Photoshop', '视频剪辑', '字幕配乐', '视觉表达'].map(
               (tag) => (
                 <span key={tag} className="tag">
                   {tag}
@@ -699,21 +645,23 @@ function App() {
 
       <RevealSection className="about-grid">
         <div className="detail-card">
-          <p className="detail-label">Personal Traits</p>
-          <h2>个人特质</h2>
+          <p className="detail-label">Editing Fit</p>
+          <h2>适合岗位的原因</h2>
           <ul className="detail-list">
-            <li>踏实稳定：成绩保持班级前列，获得国家励志奖学金。</li>
-            <li>用户敏感：长期接触年轻群体，了解用户互动和内容偏好。</li>
-            <li>执行力强：习惯按节点推进任务，适应多任务协同工作。</li>
+            <li>能独立完成基础剪辑、字幕、配乐和节奏调整。</li>
+            <li>会配合内容结构整理素材和镜头顺序，保证成片表达更清楚。</li>
+            <li>有视觉审美基础，能兼顾画面氛围、配色和整体完成度。</li>
           </ul>
         </div>
 
         <div className="detail-card">
-          <p className="detail-label">Why Me</p>
-          <h2>适合岗位的原因</h2>
-          <p>
-            我不仅能完成基础剪辑，也能配合前期文案和后期表达去把内容做完整。对视频剪辑岗位来说，这意味着我可以处理课程展示、短视频内容和基础包装类任务，也愿意在实际项目里继续提升节奏、字幕和画面表达能力。
-          </p>
+          <p className="detail-label">Work Scope</p>
+          <h2>我能承担的工作</h2>
+          <ul className="detail-list">
+            <li>课程展示、校园类内容和短视频素材的基础剪辑与整理。</li>
+            <li>字幕添加、音乐搭配、节奏调整和简单包装处理。</li>
+            <li>配合文案或脚本完成镜头取舍、顺序优化和成片收口。</li>
+          </ul>
         </div>
       </RevealSection>
     </>
@@ -1121,9 +1069,6 @@ function App() {
               </button>
               <button type="button" className="nav-button" onClick={() => scrollToSection('resume')}>
                 经历
-              </button>
-              <button type="button" className="nav-button" onClick={() => scrollToSection('references')}>
-                参考
               </button>
               <button type="button" className="nav-button" onClick={() => navigateTo(ABOUT_HASH)}>
                 About
