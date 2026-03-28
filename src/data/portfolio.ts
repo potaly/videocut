@@ -32,20 +32,20 @@ export const portfolioData: PortfolioData = {
   ],
   highlights: [
     {
-      title: '专业前 5%',
-      description: '郑州城市职业学院动漫制作技术专业在读，学习稳定，基础扎实。',
+      title: '课程展示剪辑经验',
+      description: '负责课程展示视频的剪辑与后期，能独立完成素材整理、字幕、配乐和节奏处理。',
     },
     {
-      title: '国家励志奖学金',
-      description: '能长期按节点推进任务，做事靠谱，也愿意持续学习。',
+      title: '熟练使用剪映',
+      description: '能完成基础视频剪辑、字幕添加、音乐搭配和画面节奏调整，适合短视频和展示类内容制作。',
     },
     {
-      title: '班级运营经验',
-      description: '负责班级事务协调和活动组织，说明我沟通顺畅、执行稳定，能配合团队推进工作。',
+      title: '视觉表达能力',
+      description: '参加校级动漫 IP 设计比赛获二等奖，对构图、配色和年轻化画面风格有实际积累。',
     },
     {
-      title: '校级比赛二等奖',
-      description: '参加动漫 IP 设计比赛独立完成构思到成稿，对视觉风格有实际积累。',
+      title: '专业基础扎实',
+      description: '动漫制作技术专业排名前 5%，获得国家励志奖学金，学习能力强，也能按节点稳定推进任务。',
     },
   ],
   resumeSections: [
