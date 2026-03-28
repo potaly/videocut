@@ -466,7 +466,7 @@ function App() {
             <h2>能力标签</h2>
           </div>
           <p className="section-description">
-            这部分把内容、社群、剪辑和审美拆开说清楚，避免作品很多但岗位匹配点不够直接。
+            这部分把剪辑、后期、内容策划和审美拆开说清楚，避免作品很多但岗位匹配点不够直接。
           </p>
         </div>
 
@@ -601,7 +601,7 @@ function App() {
             <h2>关于我</h2>
             <p>{portfolioData.profile.intro}</p>
             <div className="tag-row">
-              {['剪映', 'AE', 'PS', '内容策划', '社群互动', '视觉表达'].map((tag) => (
+              {['剪映', 'AE', 'PS', '视频剪辑', '后期处理', '视觉表达'].map((tag) => (
                 <span key={tag} className="tag">
                   {tag}
                 </span>
@@ -647,7 +647,7 @@ function App() {
           <p className="detail-label">Skills</p>
           <h2>技能标签</h2>
           <div className="tag-row">
-            {['剪映', 'After Effects', 'Photoshop', '内容策划', '社群互动', '视觉表达'].map(
+            {['剪映', 'After Effects', 'Photoshop', '视频剪辑', '后期处理', '视觉表达'].map(
               (tag) => (
                 <span key={tag} className="tag">
                   {tag}
@@ -712,7 +712,7 @@ function App() {
           <p className="detail-label">Why Me</p>
           <h2>适合岗位的原因</h2>
           <p>
-            我不是只会写文案或只会剪视频，而是能把选题、表达、执行和基础视觉一起串起来。对新媒体运营岗位来说，这意味着我既能配合内容生产，也能在社群互动、活动通知和短视频表达上承担实际执行工作。
+            我不仅能完成基础剪辑，也能配合前期文案和后期表达去把内容做完整。对视频剪辑岗位来说，这意味着我可以处理课程展示、短视频内容和基础包装类任务，也愿意在实际项目里继续提升节奏、字幕和画面表达能力。
           </p>
         </div>
       </RevealSection>
