@@ -223,6 +223,7 @@ function App() {
   const primaryWorks = portfolioData.works.filter((work) => !work.isBonus);
   const bonusWork = portfolioData.works.find((work) => work.isBonus);
   const [jobTarget, ...resumeDetails] = portfolioData.resumeSections;
+  const resumeSectionById = Object.fromEntries(resumeDetails.map((section) => [section.id, section] as const));
 
   const navigateTo = (hash: string) => {
     window.location.hash = hash;
@@ -594,80 +595,104 @@ function App() {
         </div>
       </RevealSection>
 
-      <RevealSection className="about-grid">
-        <div className="detail-card">
-          <p className="detail-label">Skills</p>
-          <h2>技能标签</h2>
-          <div className="tag-row">
-            {['剪映', 'After Effects', 'Photoshop', '视频剪辑', '字幕配乐', '视觉表达'].map(
-              (tag) => (
-                <span key={tag} className="tag">
-                  {tag}
-                </span>
-              ),
-            )}
-          </div>
-        </div>
-
-        {jobTarget ? (
+      <RevealSection className="about-columns">
+        <div className="about-stack">
           <div className="detail-card">
-            <p className="detail-label">{jobTarget.label}</p>
-            <h2>{jobTarget.title}</h2>
+            <p className="detail-label">Skills</p>
+            <h2>技能标签</h2>
+            <div className="tag-row">
+              {['剪映', 'After Effects', 'Photoshop', '视频剪辑', '字幕配乐', '视觉表达'].map(
+                (tag) => (
+                  <span key={tag} className="tag">
+                    {tag}
+                  </span>
+                ),
+              )}
+            </div>
+          </div>
+
+          {resumeSectionById.education ? (
+            <div className="detail-card">
+              <p className="detail-label">{resumeSectionById.education.label}</p>
+              <h2>{resumeSectionById.education.title}</h2>
+              <ul className="detail-list">
+                {resumeSectionById.education.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+
+          {resumeSectionById['post-production'] ? (
+            <div className="detail-card">
+              <p className="detail-label">{resumeSectionById['post-production'].label}</p>
+              <h2>{resumeSectionById['post-production'].title}</h2>
+              <ul className="detail-list">
+                {resumeSectionById['post-production'].items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+
+          <div className="detail-card">
+            <p className="detail-label">Editing Fit</p>
+            <h2>适合岗位的原因</h2>
             <ul className="detail-list">
-              {jobTarget.items.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
+              <li>能独立完成基础剪辑、字幕、配乐和节奏调整。</li>
+              <li>会配合内容结构整理素材和镜头顺序，保证成片表达更清楚。</li>
+              <li>有视觉审美基础，能兼顾画面氛围、配色和整体完成度。</li>
             </ul>
           </div>
-        ) : null}
 
-        <div className="detail-card">
-          <p className="detail-label">Contacts</p>
-          <h2>联系方式</h2>
-          <div className="contact-list compact">
-            {portfolioData.contacts.map((contact) => (
-              <a key={contact.label} className="contact-card" href={contact.href} {...getAnchorProps(contact.href)}>
-                <span>{contact.label}</span>
-                <strong>{contact.value}</strong>
-              </a>
-            ))}
+          <div className="detail-card">
+            <p className="detail-label">Contacts</p>
+            <h2>联系方式</h2>
+            <div className="contact-list compact">
+              {portfolioData.contacts.map((contact) => (
+                <a key={contact.label} className="contact-card" href={contact.href} {...getAnchorProps(contact.href)}>
+                  <span>{contact.label}</span>
+                  <strong>{contact.value}</strong>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
-      </RevealSection>
 
-      <RevealSection className="about-grid">
-        {resumeDetails.map((section) => (
-          <div key={section.id} className="detail-card">
-            <p className="detail-label">{section.label}</p>
-            <h2>{section.title}</h2>
+        <div className="about-stack">
+          {jobTarget ? (
+            <div className="detail-card">
+              <p className="detail-label">{jobTarget.label}</p>
+              <h2>{jobTarget.title}</h2>
+              <ul className="detail-list">
+                {jobTarget.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+
+          {resumeSectionById['content-creation'] ? (
+            <div className="detail-card">
+              <p className="detail-label">{resumeSectionById['content-creation'].label}</p>
+              <h2>{resumeSectionById['content-creation'].title}</h2>
+              <ul className="detail-list">
+                {resumeSectionById['content-creation'].items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+
+          <div className="detail-card">
+            <p className="detail-label">Work Scope</p>
+            <h2>我能承担的工作</h2>
             <ul className="detail-list">
-              {section.items.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
+              <li>课程展示、校园类内容和短视频素材的基础剪辑与整理。</li>
+              <li>字幕添加、音乐搭配、节奏调整和简单包装处理。</li>
+              <li>配合文案或脚本完成镜头取舍、顺序优化和成片收口。</li>
             </ul>
           </div>
-        ))}
-      </RevealSection>
-
-      <RevealSection className="about-grid">
-        <div className="detail-card">
-          <p className="detail-label">Editing Fit</p>
-          <h2>适合岗位的原因</h2>
-          <ul className="detail-list">
-            <li>能独立完成基础剪辑、字幕、配乐和节奏调整。</li>
-            <li>会配合内容结构整理素材和镜头顺序，保证成片表达更清楚。</li>
-            <li>有视觉审美基础，能兼顾画面氛围、配色和整体完成度。</li>
-          </ul>
-        </div>
-
-        <div className="detail-card">
-          <p className="detail-label">Work Scope</p>
-          <h2>我能承担的工作</h2>
-          <ul className="detail-list">
-            <li>课程展示、校园类内容和短视频素材的基础剪辑与整理。</li>
-            <li>字幕添加、音乐搭配、节奏调整和简单包装处理。</li>
-            <li>配合文案或脚本完成镜头取舍、顺序优化和成片收口。</li>
-          </ul>
         </div>
       </RevealSection>
     </>

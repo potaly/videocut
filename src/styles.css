@@ -610,6 +610,7 @@ ul {
 .project-grid,
 .project-columns,
 .about-grid,
+.about-columns,
 .story-grid {
   display: grid;
   gap: 20px;
@@ -628,6 +629,21 @@ ul {
 .project-columns,
 .about-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.about-grid {
+  align-items: start;
+}
+
+.about-columns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+}
+
+.about-stack {
+  display: grid;
+  gap: 20px;
+  align-content: start;
 }
 
 .work-card,
@@ -1008,6 +1024,7 @@ ul {
   .project-grid,
   .project-columns,
   .about-grid,
+  .about-columns,
   .story-grid,
   .bonus-spotlight,
   .reference-card,
