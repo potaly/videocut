@@ -7,7 +7,7 @@
   "duration": "30s",
   "intro": "这支片子是我想放在作品集第一页的剪辑案例。它围绕“下班回家后的情绪回落”展开，用开门、开灯、倒水、吃饭、听歌、发呆这些日常动作，把疲惫慢慢过渡到安静。",
   "concept": "我希望它看起来不是模板式的短视频，而是一支有呼吸感、有陪伴感的情绪片。节奏偏慢，暖色灯光和窗边夜景是主要氛围来源，字幕像心里话一样一段段落下来。",
-  "coverImage": "/about-portrait.jpg",
+  "coverImage": "https://i2.ygimg.cn/sgc/20260329/12940147058019928a9.png",
   "referenceBoard": "/reference-board.png",
   "outputVideo": "/exports/work1-healing-short.mp4",
   "renderCommand": "npm run render:work1",
