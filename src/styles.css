@@ -827,7 +827,8 @@ ul {
   position: relative;
   overflow: hidden;
   height: 100%;
-  min-height: 520px;
+  min-height: 500px;
+  aspect-ratio: 4 / 5;
   border-radius: 28px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%),
@@ -850,8 +851,9 @@ ul {
   height: 100%;
   border-radius: 28px;
   object-fit: cover;
-  object-position: center 18%;
-  filter: saturate(1.01) contrast(1.02);
+  object-position: center 24%;
+  transform: scale(1.02);
+  filter: saturate(1.02) contrast(1.03);
 }
 
 .detail-card {
