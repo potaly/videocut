@@ -817,12 +817,41 @@ ul {
 
 .about-page-side {
   overflow: hidden;
-  padding: 14px;
+  padding: 18px;
+  background:
+    radial-gradient(circle at top, rgba(235, 199, 167, 0.18), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.015) 100%);
+}
+
+.about-portrait-shell {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  min-height: 520px;
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%),
+    linear-gradient(160deg, rgba(235, 199, 167, 0.18), rgba(92, 106, 171, 0.08));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.about-portrait-shell::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(9, 10, 14, 0.08) 0%, rgba(9, 10, 14, 0.28) 100%),
+    radial-gradient(circle at top, rgba(245, 214, 185, 0.08), transparent 38%);
+  pointer-events: none;
 }
 
 .about-portrait {
-  border-radius: 24px;
-  aspect-ratio: 4 / 4.5;
+  width: 100%;
+  height: 100%;
+  border-radius: 28px;
+  object-fit: cover;
+  object-position: center 18%;
+  filter: saturate(1.01) contrast(1.02);
 }
 
 .detail-card {
@@ -987,6 +1016,10 @@ ul {
 
   .hero-subgrid {
     grid-template-columns: 1fr;
+  }
+
+  .about-portrait-shell {
+    min-height: 420px;
   }
 
   .section-head {

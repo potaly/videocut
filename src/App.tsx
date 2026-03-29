@@ -584,7 +584,13 @@ function App() {
         </div>
 
         <div className="about-page-side">
-          <img src={resolvePublicPath(healingProject.coverImage)} alt={`${portfolioData.profile.name} 头像素材`} className="about-portrait" />
+          <div className="about-portrait-shell">
+            <img
+              src={resolvePublicPath(healingProject.coverImage)}
+              alt={`${portfolioData.profile.name} 头像素材`}
+              className="about-portrait"
+            />
+          </div>
         </div>
       </RevealSection>
 
